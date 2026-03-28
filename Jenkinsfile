@@ -14,7 +14,7 @@ pipeline {
         NEXUS_URL = "172.31.40.12:8081"
         NEXUS_RELEASE_REPO = "release-repo"
         NEXUS_SNAPSHOT_REPO = "snap-repo"
-        NEXUS_GRP_REPO = "mavan-public"
+        NEXUS_GRP_REPO = "maven-public"
         NEXUS_IP = "172.31.40.12"
         NEXUS_PORT = "8081"
     }

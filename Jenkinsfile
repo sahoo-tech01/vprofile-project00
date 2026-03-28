@@ -11,7 +11,7 @@ pipeline {
         NEXUS_USER = "admin"
         NEXUS_PASS = "password"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.93.140:8081"
+        NEXUS_URL = "172.31.40.12:8081"
         NEXUS_RELEASE_REPO = "release-repo"
         NEXUS_SNAPSHOT_REPO = "snap-repo"
         NEXUS_GRP_REPO = "nexus-group"

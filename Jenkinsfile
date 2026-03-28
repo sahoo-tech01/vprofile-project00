@@ -15,7 +15,7 @@ pipeline {
         NEXUS_RELEASE_REPO = "release-repo"
         NEXUS_SNAPSHOT_REPO = "snap-repo"
         NEXUS_GRP_REPO = "nexus-group"
-        NEXUS_IP = "172.31.93.140"
+        NEXUS_IP = "172.31.40.12"
         NEXUS_PORT = "8081"
     }
 

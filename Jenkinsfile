@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         jdk 'JDK17'
-        maven 'MAVAN3.9'
+        maven 'MAVEN3.9'
     }
 
     environment {
@@ -20,10 +20,30 @@ pipeline {
     }
 
     stages {
+
         stage('Build') {
             steps {
                 sh "mvn -s settings.xml -DskipTests clean install"
             }
+            post {
+                success {
+                    echo "Now archiving artifacts..."
+                    archiveArtifacts artifacts: '**/target/*.war'
+                }
+            }
         }
+
+        stage('Unit Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Integration Test') {
+            steps {
+                sh 'mvn verify -DskipUnitTests'
+            }
+        }
+
     }
 }
